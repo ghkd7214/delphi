@@ -20,7 +20,6 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
 
-
   private
     { Private declarations }
 
@@ -28,6 +27,7 @@ type
     procedure change(var x, y : Integer);
     procedure sortArray();
     function NumMin(start: Integer) : Integer;
+
 
   public
     { Public declarations }
@@ -55,10 +55,7 @@ implementation
 
 
 
-
-
-
-procedure tForm2.SetArray();
+procedure TForm2.SetArray();
 var
   i : integer;
 begin
@@ -76,9 +73,7 @@ end;
 
 
 
-
-
-procedure tForm2.Change(var x, y : Integer);
+procedure TForm2.Change(var x, y : Integer);
 var
   temp: Integer;
 begin
@@ -89,13 +84,18 @@ end;
 
 
 
-procedure tForm2.SortArray();
+
+
+procedure TForm2.SortArray();
 var
   i: Integer;
 begin
   for i := 1 to n-1 do
     Change(a2[i], a2[NumMin(i)]);
 end;
+
+
+
 
 
 function TForm2.NumMin(start: Integer): Integer;
@@ -109,9 +109,12 @@ begin
   NumMin := m;
 end;
 
+
+
+
 procedure TForm2.Button1Click(Sender: TObject);
 var
-  a : a1;
+  a : array of integer;
 begin
   SetArray();
 end;
@@ -119,9 +122,10 @@ end;
 
 
 
+
 procedure TForm2.Button2Click(Sender: TObject);
 var
-  a : A1;
+  a : array of integer;
   i : Integer;
 begin
   SortArray();
@@ -130,22 +134,7 @@ begin
     begin
       Form2.Memo2.Lines.Append(IntToStr(i)+' : '+IntToStr(a2[i]));
     end;
-
 end;
-
-
-
-//procedure TForm1.Button3Click(Sender: TObject);
-//var
-//  a : a1;
-//  i : Integer;
-//begin
-//  Form1.Memo2.Lines.Clear;
-//  for i := 1 to n do
-//    begin
-//      Form1.Memo2.Lines.Append(IntToStr(i)+' : '+IntToStr(a[i]));
-//    end;
-//end;
 
 // 버튼2 클릭시 메모2에 소팅된 배열 출력
 end.
