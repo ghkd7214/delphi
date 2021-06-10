@@ -1,0 +1,154 @@
+unit unt_books;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Grids;
+
+type
+  TForm1 = class(TForm)
+    Edit1: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    StringGrid1: TStringGrid;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Button3: TButton;
+
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+
+  private
+
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+  books : array of string;
+
+const
+  n = 10; //최대 책개수
+
+
+
+implementation
+
+{$R *.dfm}
+
+
+//procedure search(var x : string);
+//begin
+//
+//  x := Form1.Edit1.Text;
+//
+//  if x :=  then
+//
+//end;
+
+
+
+
+procedure TForm1.Button2Click(Sender: TObject);
+
+begin
+  StringGrid1.RowCount := n + 1;
+  StringGrid1.Cells[0,0] := '제목';
+  StringGrid1.Cells[1,0] := '저자';
+  StringGrid1.Cells[2,0] := '출판사';
+  StringGrid1.Cells[3,0] := '가격';
+  StringGrid1.Cells[4,0] := '재고량';
+
+  SetLength(books,n*5);
+  books[0] :=  '시작하는 사람을 위한 델파이 프로그래밍';
+  books[1] :=  '유미 칼리코프';
+  books[2] :=  'DEVGEAR PRESS';
+  books[3] :=  '12000';
+  books[4] :=  '3';
+
+  books[5] := '델파이 Begin...End';
+  books[6] := '김원경';
+  books[7] := 'DEVGEAR PRESS';
+  books[8] := '28000';
+  books[9] := '1';
+
+  books[10] := '관점을 디자인하라';
+  books[11] := '박용후';
+  books[12] := '프롬북스';
+  books[13] := '14000';
+  books[14] := '6';
+
+  books[15] := '책먹는 여우';
+  books[16] := '프란치스카 비커만';
+  books[17] := '주니어김영사';
+  books[18] := '11000';
+  books[19] := '10';
+
+end;
+
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  i, j, x, y, xy : Integer;
+
+begin
+  xy := x + y + (y * 5);
+  for I := 0 to (n*5)-1 do
+    begin
+    if edit1.Text = books[xy] then
+      begin
+      for j := 1 to 5 do
+        StringGrid1.Cells[j,1] := books[xy];
+      end;
+
+    end;
+
+end;
+
+
+procedure TForm1.Button3Click(Sender: TObject);
+var
+  i, j, x, y, xy : Integer;
+
+begin
+  xy := x + y + (y * 5);
+  for I := 0 to (n*5)-1 do
+    begin
+    if edit1.Text = books[xy] then
+      begin
+      for j := 1 to 5 do
+        StringGrid1.Cells[j,1] := books[xy];
+      end;
+
+    end;
+
+end;
+
+
+end.
+
+
+{
+1차원배열로 만들어 2차원 배열인것처럼 사용하는 것이 훨씬 더 좋을 것 같다.
+
+위의 3 x 5 배열이 경우
+
+선언
+2dArray : Array of String; //1차원 배열로 선언
+
+할당
+SetLength(2dArray, 3 x 5);  //크기 15 (0..14)인 1차원 배열할당
+
+사용식
+x + y + (y * cx) ;// x = x축, y=y축, cx = x 축의 크기
+}
+
+
