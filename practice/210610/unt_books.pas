@@ -57,18 +57,23 @@ end;
 
 procedure TForm1.Button1Click(Sender: TObject);    //검색
 var
-  i, j, x, y : Integer;
+  i, j, k, x, y : Integer;
+
+  sbn, BookName : string;
 begin
-  for I := 0 to (n*5)-1 do
+  for I := 0 to (n*5)-1 do            // 스트링그리드 초기화부분
     for j := 0 to 4 do
       stringgrid1.Cells[j,i+1] := '';
 
-  for I := 0 to (n*5)-1 do
+   k := 0;   
+  for I := 0 to (n*5)-1 do            // xy(x,y) mod 5 가 0 인것만 검색하게하면됨
+    
     begin
-    if edit1.Text = books[xy(0,i)] then
+    if pos(edit1.text,books[xy(0,i)]) > 0 then      // pos(edit1.text,books[xy(0,i)]) <> 0 text가 제목에 있으면 
       begin
+      k := k + 1;               // 델파이는 ++ 없음
       for j := 0 to 4 do
-        StringGrid1.Cells[j,1] := books[xy(j,i)];
+        StringGrid1.Cells[j,k] := books[xy(j,i)]; 
       end;
 
     end;
@@ -76,13 +81,12 @@ begin
 end;
 
 
-procedure TForm1.Button3Click(Sender: TObject);     // 전체조회
+procedure TForm1.Button3Click(Sender: TObject);   // 전체조회
 var
   i, j, x, y : Integer;
 begin
   for I := 0 to (n*5)-1 do
     begin
-
       for j := 0 to 4 do
         StringGrid1.Cells[j,i+1] := books[xy(j,i)];
 
