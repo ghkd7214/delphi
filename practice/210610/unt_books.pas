@@ -17,10 +17,16 @@ type
     Label4: TLabel;
     Label5: TLabel;
     Button3: TButton;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
 
     procedure Button1Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure StringGrid1Click(Sender: TObject);
 
   private
 
@@ -65,13 +71,12 @@ begin
     for j := 0 to 4 do
       stringgrid1.Cells[j,i+1] := '';
 
-   k := 0;   
-  for I := 0 to (n*5)-1 do            // xy(x,y) mod 5 가 0 인것만 검색하게하면됨
-    
+   k := 0;          //스트링그리드 줄맞추려고 k씀
+  for I := 0 to (n*5)-1 do           
     begin
-    if pos(edit1.text,books[xy(0,i)]) > 0 then      // pos(edit1.text,books[xy(0,i)]) <> 0 text가 제목에 있으면 
+    if pos(edit1.text,books[xy(0,i)]) > 0 then      // pos(edit1.text,books[xy(0,i)]) > 0 text가 제목에 있으면 
       begin
-      k := k + 1;               // 델파이는 ++ 없음
+      k := k + 1;               // 델파이는 ++ 없음 
       for j := 0 to 4 do
         StringGrid1.Cells[j,k] := books[xy(j,i)]; 
       end;
@@ -79,6 +84,8 @@ begin
     end;
 
 end;
+
+
 
 
 procedure TForm1.Button3Click(Sender: TObject);   // 전체조회
@@ -132,6 +139,26 @@ begin
   books[xy(4,3)] := '10';
 
 end;
+
+
+
+
+procedure TForm1.StringGrid1Click(Sender: TObject);
+var
+  x : Integer;      // 선택한 열
+  y : Tstrings;
+begin
+  x := StringGrid1.Row;
+  y := StringGrid1.Rows[x];
+  label1.caption := y[0];
+  label2.caption := y[1];
+  label3.caption := y[2];
+  label4.caption := y[3];
+  label5.caption := y[4];
+       
+end;
+
+
 
 end.
 

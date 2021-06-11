@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.845,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.024,C:\Users\User\Documents\Embarcadero\Studio\Projects\practice\210610\prj_books.dproj=C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.471,C:\Users\User\Documents\Embarcadero\Studio\Projects\practice\210610\unt_books.pas=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.471,C:\Users\User\Documents\Embarcadero\Studio\Projects\practice\210610\unt_books.dfm=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>1899-12-30 00:00:00.000.834,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.690,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021-06-10 10:10:34.845,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021-06-10 15:43:54.471,C:\Users\User\Documents\Embarcadero\Studio\Projects\practice\210610\unt_books.dfm=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2021-06-10 15:43:54.471,C:\Users\User\Documents\Embarcadero\Studio\Projects\practice\210610\unt_books.pas=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2021-06-10 15:44:04.024,C:\Users\User\Documents\Embarcadero\Studio\Projects\practice\210610\prj_books.dproj=C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
   </Transactions>
 </BorlandProject>

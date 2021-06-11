@@ -15,39 +15,74 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 592
+    Left = 632
     Top = 152
-    Width = 31
+    Width = 9
     Height = 13
-    Caption = 'Label1'
+    Caption = '   '
   end
   object Label2: TLabel
-    Left = 592
+    Left = 632
     Top = 216
-    Width = 31
+    Width = 6
     Height = 13
-    Caption = 'Label2'
+    Caption = '  '
   end
   object Label3: TLabel
-    Left = 592
+    Left = 632
     Top = 272
-    Width = 31
+    Width = 6
     Height = 13
-    Caption = 'Label3'
+    Caption = '  '
   end
   object Label4: TLabel
-    Left = 592
+    Left = 632
     Top = 336
-    Width = 31
+    Width = 6
     Height = 13
-    Caption = 'Label4'
+    Caption = '  '
   end
   object Label5: TLabel
-    Left = 592
+    Left = 632
     Top = 400
-    Width = 31
+    Width = 6
     Height = 13
-    Caption = 'Label5'
+    Caption = '  '
+  end
+  object Label6: TLabel
+    Left = 584
+    Top = 152
+    Width = 22
+    Height = 13
+    Caption = #51228#47785
+  end
+  object Label7: TLabel
+    Left = 584
+    Top = 216
+    Width = 22
+    Height = 13
+    Caption = #51200#51088
+  end
+  object Label8: TLabel
+    Left = 584
+    Top = 272
+    Width = 33
+    Height = 13
+    Caption = #52636#54032#49324
+  end
+  object Label9: TLabel
+    Left = 584
+    Top = 336
+    Width = 22
+    Height = 13
+    Caption = #44032#44201
+  end
+  object Label10: TLabel
+    Left = 584
+    Top = 400
+    Width = 33
+    Height = 13
+    Caption = #51116#44256#47049
   end
   object Edit1: TEdit
     Left = 8
@@ -79,6 +114,7 @@ object Form1: TForm1
     Height = 265
     FixedCols = 0
     TabOrder = 2
+    OnClick = StringGrid1Click
     ColWidths = (
       204
       87
