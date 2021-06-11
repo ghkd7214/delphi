@@ -17,42 +17,42 @@ object Form1: TForm1
   object Label1: TLabel
     Left = 592
     Top = 152
-    Width = 273
-    Height = 17
+    Width = 31
+    Height = 13
     Caption = 'Label1'
   end
   object Label2: TLabel
     Left = 592
     Top = 216
-    Width = 121
-    Height = 17
+    Width = 31
+    Height = 13
     Caption = 'Label2'
   end
   object Label3: TLabel
     Left = 592
     Top = 272
-    Width = 121
-    Height = 17
+    Width = 31
+    Height = 13
     Caption = 'Label3'
   end
   object Label4: TLabel
     Left = 592
     Top = 336
-    Width = 121
-    Height = 25
+    Width = 31
+    Height = 13
     Caption = 'Label4'
   end
   object Label5: TLabel
     Left = 592
     Top = 400
-    Width = 121
-    Height = 17
+    Width = 31
+    Height = 13
     Caption = 'Label5'
   end
   object Edit1: TEdit
     Left = 8
     Top = 71
-    Width = 193
+    Width = 209
     Height = 24
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -64,7 +64,7 @@ object Form1: TForm1
     Text = #52293' '#51228#47785#51012' '#51077#47141#54616#49464#50836'.'
   end
   object Button1: TButton
-    Left = 248
+    Left = 328
     Top = 71
     Width = 81
     Height = 24
@@ -72,22 +72,13 @@ object Form1: TForm1
     TabOrder = 1
     OnClick = Button1Click
   end
-  object Button2: TButton
-    Left = 456
-    Top = 56
-    Width = 97
-    Height = 40
-    Caption = #52488#44592#54868
-    TabOrder = 2
-    OnClick = Button2Click
-  end
   object StringGrid1: TStringGrid
     Left = 8
     Top = 152
     Width = 561
     Height = 265
     FixedCols = 0
-    TabOrder = 3
+    TabOrder = 2
     ColWidths = (
       204
       87
@@ -96,12 +87,12 @@ object Form1: TForm1
       66)
   end
   object Button3: TButton
-    Left = 352
+    Left = 488
     Top = 71
     Width = 81
     Height = 24
     Caption = #51204#52404#51312#54924
-    TabOrder = 4
+    TabOrder = 3
     OnClick = Button3Click
   end
 end

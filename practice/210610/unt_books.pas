@@ -10,7 +10,6 @@ type
   TForm1 = class(TForm)
     Edit1: TEdit;
     Button1: TButton;
-    Button2: TButton;
     StringGrid1: TStringGrid;
     Label1: TLabel;
     Label2: TLabel;
@@ -20,7 +19,6 @@ type
     Button3: TButton;
 
     procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
 
@@ -46,14 +44,6 @@ implementation
 {$R *.dfm}
 
 
-//procedure search(var x : string);
-//begin
-//
-//  x := Form1.Edit1.Text;
-//
-//  if x :=  then
-//
-//end;
 
 function xy (x,y:Integer) : Integer;
 var
@@ -63,43 +53,6 @@ begin
 end;
 
 
-
-procedure TForm1.Button2Click(Sender: TObject);    //초기화
-
-begin
-  StringGrid1.RowCount := n + 1;
-  StringGrid1.Cells[0,0] := '제목';
-  StringGrid1.Cells[1,0] := '저자';
-  StringGrid1.Cells[2,0] := '출판사';
-  StringGrid1.Cells[3,0] := '가격';
-  StringGrid1.Cells[4,0] := '재고량';
-
-  SetLength(books,n*5);
-  books[xy(0,0)] :=  '시작하는 사람을 위한 델파이 프로그래밍';
-  books[xy(1,0)] :=  '유미 칼리코프';
-  books[xy(2,0)] :=  'DEVGEAR PRESS';
-  books[xy(3,0)] :=  '12000';
-  books[xy(4,0)] :=  '3';
-
-  books[xy(0,1)] := '델파이 Begin...End';
-  books[xy(1,1)] := '김원경';
-  books[xy(2,1)] := 'DEVGEAR PRESS';
-  books[xy(3,1)] := '28000';
-  books[xy(4,1)] := '1';
-
-  books[xy(0,2)] := '관점을 디자인하라';
-  books[xy(1,2)] := '박용후';
-  books[xy(2,2)] := '프롬북스';
-  books[xy(3,2)] := '14000';
-  books[xy(4,2)] := '6';
-
-  books[xy(0,3)] := '책먹는 여우';
-  books[xy(1,3)] := '프란치스카 비커만';
-  books[xy(2,3)] := '주니어김영사';
-  books[xy(3,3)] := '11000';
-  books[xy(4,3)] := '10';
-
-end;
 
 
 procedure TForm1.Button1Click(Sender: TObject);    //검색
@@ -136,8 +89,6 @@ begin
     end;
 
 end;
-
-
 
 
 
